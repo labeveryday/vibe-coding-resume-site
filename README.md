@@ -107,7 +107,7 @@ graph TD
 ## Prerequisites
 
 - AWS CLI configured with appropriate permissions
-- Amazon Q Developer CLI installed (`q` command)
+- [Amazon Q Developer CLI](https://aws.amazon.com/q/developer/build/?trk=e82ccfd0-c568-4caa-be60-3ef3cd93cd48&sc_channel=el) installed (`q` command)
 - Basic understanding of web development concepts
 - Git installed on your system
 
