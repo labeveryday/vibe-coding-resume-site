@@ -2,45 +2,78 @@
 
 ## Table of Contents
 
-- [What is Vibe Coding?](#what-is-vibe-coding)
-  - [The Vibe Coding Workflow](#the-vibe-coding-workflow)
-- [Prerequisites](#prerequisites)
-- [Quick Start (5 Minutes)](#quick-start-5-minutes)
-- [Getting Started: Download the Scaffold Repository](#getting-started-download-the-scaffold-repository)
-  - [Step 1: Clone the Repository](#step-1-clone-the-repository)
-  - [Step 2: Understand the Project Structure](#step-2-understand-the-project-structure)
-  - [Step 3: Prepare Your Content](#step-3-prepare-your-content)
-- [Phase 1: High-Level Planning (The Foundation)](#phase-1-high-level-planning-the-foundation)
-  - [Step 1: Start with Strategic Thinking](#step-1-start-with-strategic-thinking)
-  - [Step 2: Explore AWS Deployment Options](#step-2-explore-aws-deployment-options)
-- [Phase 2: Local Development with Amazon Q CLI](#phase-2-local-development-with-amazon-q-cli)
-  - [Step 4: Start Amazon Q CLI Session](#step-4-start-amazon-q-cli-session)
-  - [Step 5: Generate the HTML Resume](#step-5-generate-the-html-resume)
-  - [Step 6: Make It Responsive](#step-6-make-it-responsive)
-- [Phase 3: AWS Deployment](#phase-3-aws-deployment)
-  - [Step 7: Deploy to AWS with Security Best Practices](#step-7-deploy-to-aws-with-security-best-practices)
-  - [Step 8: Verify Deployment](#step-8-verify-deployment)
-- [Phase 4: Documentation and Automation](#phase-4-documentation-and-automation)
-  - [Step 9: Generate Project Documentation](#step-9-generate-project-documentation)
-  - [Step 10: Create Update Scripts](#step-10-create-update-scripts)
-- [Essential Amazon Q CLI Commands](#essential-amazon-q-cli-commands)
-- [Practical Vibe Coding Examples](#practical-vibe-coding-examples)
-- [Best Practices for Vibe Coding with Amazon Q](#best-practices-for-vibe-coding-with-amazon-q)
-  - [The Phase Approach (Core Methodology)](#the-phase-approach-core-methodology)
-  - [Amazon Q CLI Best Practices (Official AWS Guidance)](#amazon-q-cli-best-practices-official-aws-guidance)
-  - [Vibe Coding Specific Tips](#vibe-coding-specific-tips)
-  - [Security Considerations](#security-considerations)
-  - [When Vibe Coding Works Best](#when-vibe-coding-works-best)
-  - [Common Pitfalls to Avoid](#common-pitfalls-to-avoid)
-  - [Advanced Vibe Coding Techniques](#advanced-vibe-coding-techniques)
-  - [Troubleshooting Common Issues](#troubleshooting-common-issues)
-  - [Performance and Cost Optimization](#performance-and-cost-optimization)
-- [Troubleshooting](#troubleshooting)
-- [Advanced Tips](#advanced-tips)
-- [Conclusion](#conclusion)
-  - [Success Checklist](#success-checklist)
-  - [What's Next?](#whats-next)
-- [Resources](#resources)
+- [Vibe Coding a Resume Site with Amazon Q: Complete Guide](#vibe-coding-a-resume-site-with-amazon-q-complete-guide)
+  - [Table of Contents](#table-of-contents)
+  - [What is Vibe Coding?](#what-is-vibe-coding)
+    - [The Vibe Coding Workflow](#the-vibe-coding-workflow)
+  - [Prerequisites](#prerequisites)
+  - [Quick Start (5 Minutes)](#quick-start-5-minutes)
+  - [Getting Started: Download the Scaffold Repository](#getting-started-download-the-scaffold-repository)
+    - [Step 1: Clone the Repository](#step-1-clone-the-repository)
+    - [Step 2: Understand the Project Structure](#step-2-understand-the-project-structure)
+    - [Step 3: Prepare Your Content](#step-3-prepare-your-content)
+      - [Add Your Resume Content](#add-your-resume-content)
+      - [Add Your Images](#add-your-images)
+  - [Phase 1: High-Level Planning (The Foundation)](#phase-1-high-level-planning-the-foundation)
+    - [Step 1: Start with Strategic Thinking](#step-1-start-with-strategic-thinking)
+    - [Step 2: Explore AWS Deployment Options](#step-2-explore-aws-deployment-options)
+  - [Phase 2: Local Development with Amazon Q CLI](#phase-2-local-development-with-amazon-q-cli)
+    - [Step 4: Start Amazon Q CLI Session](#step-4-start-amazon-q-cli-session)
+    - [Step 5: Generate the HTML Resume](#step-5-generate-the-html-resume)
+    - [Step 6: Make It Responsive](#step-6-make-it-responsive)
+  - [Phase 3: AWS Deployment](#phase-3-aws-deployment)
+    - [Step 7: Deploy to AWS with Security Best Practices](#step-7-deploy-to-aws-with-security-best-practices)
+    - [Step 8: Verify Deployment](#step-8-verify-deployment)
+  - [Phase 4: Documentation and Automation](#phase-4-documentation-and-automation)
+    - [Step 9: Generate Project Documentation](#step-9-generate-project-documentation)
+    - [Step 10: Create Update Scripts](#step-10-create-update-scripts)
+  - [Essential Amazon Q CLI Commands](#essential-amazon-q-cli-commands)
+    - [Basic Commands](#basic-commands)
+    - [Advanced Features](#advanced-features)
+  - [Practical Vibe Coding Examples](#practical-vibe-coding-examples)
+    - [Example 1: Adding a Contact Form](#example-1-adding-a-contact-form)
+    - [Example 2: Adding Analytics](#example-2-adding-analytics)
+    - [Example 3: Custom Domain Setup](#example-3-custom-domain-setup)
+    - [Example 4: Performance Optimization](#example-4-performance-optimization)
+    - [Example 5: Adding a Blog Section](#example-5-adding-a-blog-section)
+    - [Example 6: Multi-language Support](#example-6-multi-language-support)
+  - [Best Practices for Vibe Coding with Amazon Q](#best-practices-for-vibe-coding-with-amazon-q)
+    - [The Phase Approach (Core Methodology)](#the-phase-approach-core-methodology)
+    - [Amazon Q CLI Best Practices (Official AWS Guidance)](#amazon-q-cli-best-practices-official-aws-guidance)
+      - [Providing Context for Better Results](#providing-context-for-better-results)
+      - [Effective Prompting Techniques](#effective-prompting-techniques)
+      - [Working with Amazon Q CLI Chat](#working-with-amazon-q-cli-chat)
+    - [Vibe Coding Specific Tips](#vibe-coding-specific-tips)
+      - [The "Go with the Vibes" Philosophy](#the-go-with-the-vibes-philosophy)
+      - [Effective Vibe Coding Prompts](#effective-vibe-coding-prompts)
+      - [Managing Complexity](#managing-complexity)
+    - [Security Considerations](#security-considerations)
+      - [Built-in Security Features](#built-in-security-features)
+      - [AWS Security Best Practices](#aws-security-best-practices)
+    - [When Vibe Coding Works Best](#when-vibe-coding-works-best)
+    - [Common Pitfalls to Avoid](#common-pitfalls-to-avoid)
+      - [Development Pitfalls](#development-pitfalls)
+      - [Amazon Q Specific Pitfalls](#amazon-q-specific-pitfalls)
+    - [Advanced Vibe Coding Techniques](#advanced-vibe-coding-techniques)
+      - [Context Management](#context-management)
+      - [Optimization Strategies](#optimization-strategies)
+      - [Collaboration Tips](#collaboration-tips)
+    - [Troubleshooting Common Issues](#troubleshooting-common-issues)
+      - [When Q Doesn't Understand](#when-q-doesnt-understand)
+      - [When Results Aren't What You Expected](#when-results-arent-what-you-expected)
+    - [Performance and Cost Optimization](#performance-and-cost-optimization)
+      - [AWS Cost Management](#aws-cost-management)
+      - [Development Efficiency](#development-efficiency)
+  - [Troubleshooting](#troubleshooting)
+    - [When Things Go Wrong](#when-things-go-wrong)
+    - [Getting Better Results](#getting-better-results)
+  - [Advanced Tips](#advanced-tips)
+    - [Enhancing Your Vibe Coding](#enhancing-your-vibe-coding)
+    - [Cost Optimization](#cost-optimization)
+  - [Conclusion](#conclusion)
+    - [Success Checklist](#success-checklist)
+    - [What's Next?](#whats-next)
+  - [Resources](#resources)
 
 ---
 
@@ -178,10 +211,22 @@ Edit the `resume/resume.md` file with your information:
 Before writing any code, use Claude or another AI to think through your project at a high level:
 
 ```
-I want to develop a resume website on AWS, but I have never done it before. 
-Can you help me think about what I need to do to make this happen? 
-I want it to look great and be responsive. 
-Let's think step by step with no code, high level.
+You are an AWS solutions architect. I'm a complete beginner who wants to create a professional resume website on AWS. 
+
+Requirements:
+- Professional, modern design
+- Mobile responsive
+- Secure hosting
+- Cost-effective (under $1/month)
+
+Please provide a step-by-step strategic plan with:
+1. AWS services I should use and why
+2. Architecture considerations for beginners
+3. Security best practices
+4. Development workflow
+5. Estimated costs
+
+Keep everything high-level with no code examples.
 ```
 
 This gives you:
@@ -199,10 +244,10 @@ This gives you:
 Ask for AWS-specific guidance:
 
 ```
-Create a website on AWS
+Why did you make the suggestions you provided?
 ```
 
-The AI will typically suggest multiple approaches:
+The AI will typically explain multiple approaches:
 1. **Simple S3 Static Website** - Basic hosting
 2. **S3 + CloudFront** - Better performance with CDN
 3. **S3 + CloudFront + Route 53** - Custom domain support
@@ -232,9 +277,17 @@ q chat
 Use this vibe coding prompt:
 
 ```
-I have a resume.md file in the resume/ folder that I want to make into an HTML resume page. 
-I also have images in the images/ folder including my profile image and certification badges. 
-Use this info to build a professional resume website.
+I have a resume.md file in my resume/ folder and professional images in my images/ folder (profile photo and certification badges). 
+
+Create a modern, professional HTML resume website that:
+- Uses semantic HTML structure
+- Includes responsive CSS styling
+- Integrates my profile image prominently
+- Displays certification badges professionally
+- Uses modern typography and clean layout
+- Follows web accessibility standards
+
+Make design decisions for me - I trust your aesthetic choices.
 ```
 
 Amazon Q will:
@@ -253,7 +306,19 @@ Amazon Q will:
 After the initial site is created, ask:
 
 ```
-Make this website responsive for mobile devices
+Transform this website to be fully responsive across all devices:
+- Mobile phones (320px and up)
+- Tablets (768px and up) 
+- Desktop (1024px and up)
+
+Implement:
+- Flexible grid layouts
+- Scalable images
+- Touch-friendly navigation
+- Readable typography at all sizes
+- Fast loading on mobile networks
+
+Test and ensure it looks professional on every screen size.
 ```
 
 Q will update the HTML/CSS to ensure it looks good on:
@@ -271,8 +336,17 @@ Q will update the HTML/CSS to ensure it looks good on:
 Use this prompt for secure deployment:
 
 ```
-I want to deploy this to AWS, but I do not want a public S3 bucket. 
-I want everything to be secure and we can leverage CloudFront.
+Deploy this website to AWS following security best practices:
+
+Requirements:
+- Private S3 bucket (no public access)
+- CloudFront distribution for global delivery
+- HTTPS enforcement
+- Origin Access Control (not legacy OAI)
+- Proper security headers
+- Cost optimization settings
+
+Provide the deployment commands and explain the security benefits of this architecture.
 ```
 
 Amazon Q will:
@@ -294,6 +368,10 @@ Amazon Q will:
 
 ### Step 8: Verify Deployment
 
+```
+Please verify that the website has been successfully deployed.
+```
+
 Q will provide:
 - CloudFront distribution URL
 - Deployment confirmation
@@ -307,8 +385,16 @@ Q will provide:
 Ask Q to create comprehensive documentation:
 
 ```
-Create a detailed README of everything we have done to create the site and deploy it to AWS. 
-Include Mermaid diagrams.
+Create comprehensive project documentation including:
+
+1. Architecture overview with Mermaid diagram
+2. Step-by-step deployment guide
+3. Security configuration details
+4. Cost breakdown and optimization tips
+5. Future update procedures
+6. Troubleshooting common issues
+
+Format as a professional README.md that a beginner could follow to recreate this project.
 ```
 
 This creates:
@@ -324,7 +410,16 @@ This creates:
 Automate future updates:
 
 ```
-Create a PowerShell script that will automatically update the site and invalidate CloudFront once it does.
+Create a robust automation script (bash preferred) that:
+
+1. Syncs local files to S3 bucket
+2. Invalidates CloudFront cache
+3. Includes error handling and progress feedback
+4. Validates files before upload
+5. Provides deployment confirmation
+6. Logs all operations with timestamps
+
+Include clear setup instructions and usage examples.
 ```
 
 Q will generate scripts for:
@@ -333,7 +428,7 @@ Q will generate scripts for:
 - Error handling and progress reporting
 - Parameter validation
 
-**Alternative Scripts**: You can also ask for bash scripts, Python scripts, or other automation tools.
+**Alternative Scripts**: You can also ask for poweshell scripts, Python scripts, or other automation tools.
 
 ## Essential Amazon Q CLI Commands
 
